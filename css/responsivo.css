@@ -214,11 +214,84 @@
     }
 
     /* Header */
+    
+    header {
+        padding: 20px 0;
+    }
+
+    header.escondido {
+        top: -120px;
+    }
 
     .nav-header ul li a{
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         letter-spacing: 0.05em;
     }  
+
+    .nav-header ul {
+        /*display: block;
+        visibility: hidden;
+        position: absolute;
+        top: 144px;
+        left: 20px;
+        flex-direction: column;
+        gap: 10px;
+        text-align: left;
+        height: 0;
+        transition: .3s;*/
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        position: absolute;
+        top: 0;
+        right: -200px;
+        z-index: 1000;
+        height: 100vh;
+        overflow: hidden;
+        transition: .6s;
+        text-transform: uppercase;
+        text-align: end;
+        line-height: 2em;
+        background: #000;
+        padding: 20px 40px;
+    }
+
+    .nav-header ul.ativo {
+        right: 0;
+        box-shadow: 0 0 500px 500px rgba(0,0,0,.75);
+        transition: .6s;
+    }
+
+    @keyframes to-right {
+        from {
+            opacity: 0;
+            transform: translate3d(0,-20px,0);
+        }
+
+        to {
+            opacity: 1;
+            transform: translate3d(0,0,0);
+        }
+    }
+
+    .menu-mobile {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .menu-mobile::after {
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 2px;
+        background-color: #000;
+        box-shadow: 0 4px 0 #000, 0 -4px 0 #000;
+    }
+
+    .link-logo {
+        padding: 0;
+    }
 
     /* Intro */
 
@@ -263,15 +336,41 @@
     }
 
     #produtos nav ul {
-        display: flex;
-        flex-wrap: wrap;
+        visibility: hidden;
+        display: block;
         max-width: 280px;
+        height: 0;
+        overflow: hidden;
+        transition: .3s;
+    }
+
+    #produtos nav ul.ativo {
+        visibility: visible;
         justify-content: center;
+        display: flex;
+        height: unset;
+        flex-direction: column;
+        overflow: auto;
     }
 
     #produtos button {
         padding: .75rem 14px;
         font-size: 1rem;
+    }
+
+    .filtrar {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .filtrar::before {
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 2px;
+        background-color: #fff;
+        box-shadow: 0 4px 0 #fff, 0 -4px 0 #fff;
     }
 
     /* Itens */
