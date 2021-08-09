@@ -217,6 +217,7 @@
     
     header {
         padding: 20px 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, .8));
     }
 
     header.escondido {
@@ -250,9 +251,9 @@
         top: 0;
         right: -200px;
         z-index: 1000;
-        height: 100vh;
+        height: 120vh;
         overflow: hidden;
-        transition: .6s;
+        transition: .3s;
         text-transform: uppercase;
         text-align: end;
         line-height: 2em;
@@ -289,6 +290,7 @@
         font-size: 1rem;
         letter-spacing: .02rem;
         border-radius: 3px;
+        box-shadow: 5px 5px 8px 8px rgba(0,0,0, .10);
     }
 
     .menu-mobile::after {
