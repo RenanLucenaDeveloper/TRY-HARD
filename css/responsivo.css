@@ -262,7 +262,7 @@
 
     .nav-header ul.ativo {
         right: 0;
-        box-shadow: 0 0 500px 500px rgba(0,0,0,.75);
+        box-shadow: 0 0 500px 500px rgba(0,0,0,.80);
         transition: .6s;
     }
 
@@ -426,7 +426,7 @@
     /* Footer */
 
     .logo {
-        height: 70px;
+        height: 60px;
     }
 
     .nav-footer ul li a{
