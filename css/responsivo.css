@@ -228,6 +228,10 @@
         letter-spacing: 0.05em;
     }  
 
+    .fechar {
+        display: block;
+    }
+
     .nav-header ul {
         /*display: block;
         visibility: hidden;
@@ -278,6 +282,13 @@
         display: flex;
         align-items: center;
         gap: .5rem;
+        background: #000;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: .5rem .75rem;
+        font-size: 1rem;
+        letter-spacing: .02rem;
+        border-radius: 3px;
     }
 
     .menu-mobile::after {
@@ -285,8 +296,9 @@
         display: inline-block;
         width: 15px;
         height: 2px;
-        background-color: #000;
-        box-shadow: 0 4px 0 #000, 0 -4px 0 #000;
+        background-color: #fff;
+        box-shadow: 0 4px 0 #fff, 0 -4px 0 #fff;
+        transform: translate3d(0,-2px,0);
     }
 
     .link-logo {
@@ -301,6 +313,7 @@
 
     #intro h1 {
         font-size: 1.5rem;
+        line-height: 28px;
         max-width: 280px;
         margin: 0 auto;
         word-wrap: break-word;
@@ -333,6 +346,10 @@
 
     #produtos nav {
         margin-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
 
     #produtos nav ul {
@@ -362,6 +379,13 @@
         display: flex;
         align-items: center;
         gap: .5rem;
+        background: #000 !important;
+        border: 1px solid #fff !important;
+        color: #fff !important;
+        padding: .5rem .75rem !important;
+        font-size: 1rem !important;
+        letter-spacing: .02rem !important;
+        border-radius: 3px;
     }
 
     .filtrar::before {
@@ -371,6 +395,12 @@
         height: 2px;
         background-color: #fff;
         box-shadow: 0 4px 0 #fff, 0 -4px 0 #fff;
+        transform: rotate(0);
+        transition: .3s;
+    }
+
+    .filtrar.ativo::before {
+        transform: rotate(90deg);
     }
 
     /* Itens */
@@ -396,7 +426,7 @@
     /* Footer */
 
     .logo {
-        height: 80px;
+        height: 70px;
     }
 
     .nav-footer ul li a{

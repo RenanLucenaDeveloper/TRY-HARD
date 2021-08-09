@@ -19,7 +19,6 @@ function initMenuMobile() {
         botaoAbrir.classList.remove('ativo');
     }
 
-    //eventos.forEach((e) => {botaoAbrir.addEventListener(e, abrirMenu)});
     botaoAbrir.addEventListener('touchstart', abrirMenu);
     botaoFechar.addEventListener('touchstart', fecharMenu);
     linkMenu.forEach((i) => { i.addEventListener('touchstart', fecharMenu) }
@@ -33,6 +32,7 @@ function initFiltrar() {
     
     function ativaFiltrar() {
         menuFiltrar.classList.toggle('ativo');
+        botaoAbrir.classList.toggle('ativo');
     }
 
     botaoAbrir.addEventListener('touchstart', ativaFiltrar);

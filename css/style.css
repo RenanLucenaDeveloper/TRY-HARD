@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Bebas Neue', cursive;
     background-color: #000;
@@ -78,6 +82,10 @@ header {
 .logo {
     display: block;
     height: 100px;
+}
+
+.fechar {
+    display: none;
 }
 
 /* Intro */
