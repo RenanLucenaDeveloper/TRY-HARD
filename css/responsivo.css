@@ -425,6 +425,41 @@
         font-size: 1rem !important;
     }
 
+    /* Modal do Produto */
+
+    .modal-container {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        bottom: -100vh;
+        left: 0;
+        background-color: #FCF1F1;
+        overflow-y: scroll;
+        z-index: 9999;
+        transition: .3s;
+    }
+    
+    .modal-produto {
+        display: block;
+        max-height: 80vh;
+        max-width: 280px;
+        min-width: 280px;
+        background-color: #000;
+        padding-top: 4rem;
+        z-index: 99999;
+    }
+    
+    .modal-container.ativo {
+        bottom: 0;
+    }
+    
+    /*.modal-produto.ativo {
+
+    }*/
+
     /* Footer */
 
     .logo {
@@ -440,7 +475,7 @@
     }
 
     .copy {
-        font-size: 1rem;
+        font-size: .9rem;
         line-height: 24px;
         max-width: 280px;
         margin: 0 auto;

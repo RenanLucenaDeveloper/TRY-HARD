@@ -21,7 +21,6 @@ function initMenuMobile() {
     const botaoFechar = document.querySelector('[data-menuMobile="fechar"]');
     const menuMobile = document.querySelector('[data-menuMobile="menu"]');
     const linkMenu = document.querySelectorAll('[data-menuMobile="linkMenu"]');
-    const eventos = ['click', 'touchstart'];
 
     function abrirMenu() {
         menuMobile.classList.add('ativo');
@@ -58,5 +57,25 @@ function initFiltrar() {
 initFiltrar()
 
 function initModalProduto() {
-    
+    const imagensDosProdutos = document.querySelectorAll('[data-modalProduto="imagem"]');    
+    const botaoDosProdutos = document.querySelectorAll('[data-modalProduto="botao"]');
+    const botaoFecharModal = document.querySelector('[data-modalProduto="fechar"]');
+    const modalProduto = document.querySelector('[data-modalProduto="modal"]');
+    const eventos = ['click', 'touchstart'];
+
+    function abreModal() {
+        modalProduto.classList.add('ativo');
+    }
+
+    function fechaModal() {
+        modalProduto.classList.remove('ativo');
+    }
+
+    eventos.forEach((evento) => {
+        botaoFecharModal.addEventListener(evento, fechaModal);
+    }) 
+
+    imagensDosProdutos.forEach((i) => {i.addEventListener('click', abreModal);})
+    botaoDosProdutos.forEach((i) => {i.addEventListener('click', abreModal);})
 }
+initModalProduto();

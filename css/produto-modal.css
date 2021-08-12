@@ -1,0 +1,100 @@
+/* Container do Modal */
+
+.modal-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    bottom: -100vh;
+    left: 0;
+    background-color: #000;
+    overflow-y: scroll;
+    z-index: 9999;
+    transition: .3s;
+    overflow-y: hidden;
+}
+
+.modal-produto {
+    display: block;
+    height: 80vh;
+    max-width: 100vw;
+    min-width: 100vw;
+    background-color: #000;
+    padding-top: 4rem;
+    z-index: 99999;
+}
+
+.modal-container.ativo {
+    bottom: 0;
+}
+
+/* Produto */
+
+.produto {
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.apresentacao-descricao {
+    max-width: 45vw;
+}
+
+.apresentacao-descricao h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+}
+
+.apresentacao-descricao h1::after {
+    content: "";
+    display: block;
+    width: 15rem;
+    height: 3px;
+    background: #270003;
+    margin: .5rem auto 1rem 0;
+}
+
+.apresentacao-imagem {
+    display: block;
+    width: 420px;
+    height: 420px;
+    background-color: #FCF1F1;
+    border-radius: 3px;
+}
+
+.item-descricao {
+    font-family: 'Bitter', serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.apresentacao-ficha {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    margin-bottom: .5rem;
+}
+
+.apresentacao-ficha li{
+    display: flex;
+    gap: .25rem;
+    font-family: 'Bitter', serif;
+    font-size: 1rem;
+}
+
+.apresentacao-ficha li span {
+    font-weight: bold;
+}
+
+#tamanho {
+    display: block;
+}
+
+.preco {
+    display: block;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+}

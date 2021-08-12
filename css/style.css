@@ -61,7 +61,7 @@ header {
     top: 0;
     left: 0;
     width: 100vw;
-    z-index: 9999;
+    z-index: 999;
     padding: 30px 0;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.20);
     transition: .3s;
@@ -167,7 +167,7 @@ header {
     cursor: pointer;
 }
 
-#produtos li + li::before {
+#produtos nav li + li::before {
     content: "";
     display: inline-block;
     height: 1rem;
@@ -296,7 +296,7 @@ footer {
 .nav-footer ul {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 4px;
     text-align: right;
 }
 
