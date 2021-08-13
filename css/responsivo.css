@@ -311,6 +311,7 @@
 
     #intro {
         background: url(../img/bg-gradiente-mobile.jpg) no-repeat center;
+        padding-top: 190px;
     }
 
     #intro h1 {
