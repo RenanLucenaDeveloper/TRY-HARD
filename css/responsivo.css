@@ -444,21 +444,138 @@
     
     .modal-produto {
         display: block;
-        max-height: 80vh;
+        max-height: 100vh;
         max-width: 280px;
         min-width: 280px;
         background-color: #000;
         padding-top: 4rem;
         z-index: 99999;
+        overflow-y: scroll;
     }
     
     .modal-container.ativo {
         bottom: 0;
     }
     
-    /*.modal-produto.ativo {
+    /* Produto */
 
-    }*/
+    .produto {
+        flex-direction: column;
+        max-width: 280px !important;
+        justify-content: start;
+    }
+
+    .apresentacao-descricao {
+        max-width: 280px;
+    }
+
+    .apresentacao-descricao h1 {
+        font-size: 2rem;
+        letter-spacing: .05rem !important;
+    }
+
+    .apresentacao-descricao h1::after {
+        width: 100px !important;
+        margin: .25rem auto 1rem 0 !important;
+    }
+
+    .apresentacao-imagem {
+        width: 280px !important;
+        height: 280px !important;
+        background-color: #FCF1F1;
+        border-radius: 3px;
+        margin-bottom: 2rem;
+    }
+
+    .item-descricao {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        max-width: 280px;
+        line-height: 1.3rem;
+    }
+
+    .apresentacao-ficha {
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .apresentacao-ficha li{
+        gap: .25rem;
+        font-size: 1rem;
+    }
+
+    .apresentacao-ficha li span {
+        font-weight: bold;
+    }
+
+    .apresentacao-ficha li p {
+        color: #CEC1C1;
+    }
+
+    #tamanho {
+        display: block;
+        margin-bottom: 2rem;
+        background-color: #000;
+        color: #fff;
+        padding: .25rem .75rem;
+        border-radius: 3px;
+        border: 2px solid #CEC1C1;
+        width: 200px;
+        margin-top: .25rem;
+    }
+
+    .preco {
+        display: block;
+        font-size: 1.75rem;
+        letter-spacing: 0.05em;
+        margin-bottom: 1.5rem;
+    }
+
+    .comprar-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .quantidade-container {
+        display: flex;
+        gap: .75rem;
+        align-items: center;
+    }
+
+    .quantidade-produto {
+        font-size: 1.5rem;
+        color: #CEC1C1;
+    }
+
+    .modal-produto .botao-comprar {
+        background-color: #FCF1F1 !important;
+        color: #000 !important;
+        border-radius: 3px;
+        font-size: 1.5rem !important;
+        letter-spacing: .02rem !important;
+    }
+
+    .botao-lista-de-desejos {
+        color: #CEC1C1;
+        font-family: 'Bitter', serif;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: .25rem;
+    }
+
+    .botao-lista-de-desejos::before {
+        content: "";
+        display: inline-block;
+        height: 15px;
+        width: 17px;
+        background: url(../img/coracao.svg) no-repeat center;
+        background-size: cover;
+    }
 
     /* Footer */
 
