@@ -22,7 +22,7 @@
     max-width: 100vw;
     min-width: 100vw;
     background-color: #0F0001;
-    padding-top: 4rem;
+    padding-top: 8rem;
     z-index: 99999;
 }
 
@@ -31,6 +31,12 @@
 }
 
 /* Produto */
+
+.fechar-modal {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+}
 
 .produto {
     display: flex;

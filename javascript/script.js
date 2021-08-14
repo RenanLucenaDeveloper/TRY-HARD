@@ -1,3 +1,5 @@
+const eventos = ['click', 'touchstart'];
+
 function initHeaderMobile() {
     const header = document.querySelector('[data-header]');
     let lastScrollTop = 0;
@@ -22,26 +24,66 @@ function initMenuMobile() {
     const menuMobile = document.querySelector('[data-menuMobile="menu"]');
     const linkMenu = document.querySelectorAll('[data-menuMobile="linkMenu"]');
 
-    function abrirMenu() {
+    function abrirMenu(e) {
         menuMobile.classList.add('ativo');
         botaoAbrir.classList.add('ativo');
+        initClickOutside(menuMobile, eventos, () => {
+            menuMobile.classList.remove('ativo');
+            botaoAbrir.classList.remove('ativo');
+        });
     }
 
     function fecharMenu() {
         menuMobile.classList.remove('ativo');
         botaoAbrir.classList.remove('ativo');
     }
+        
+    function initClickOutside(element, events, callback) {
 
+        //Guarda o document.documentElement  e o atributo data-outside em uma constante
+        const html = document.documentElement;
+        const outside = 'data-outside'
+    
+        //Verifica se o elemento não tem o atributo data-outside para evitar de adicionar muitos event listeners no html
+        if(!element.hasAttribute(outside)){
+    
+            //Adiciona os event listeners no html e logo adiciona o atributo data-outside
+            events.forEach((e) => {
+                setTimeout(() => {html.addEventListener(e, removeClasse)}, 0);
+            })
+            element.setAttribute(outside, '');
+        }
+    
+        //Função que remove a classe ativo usando a callback que o ativador desta função passar
+        function removeClasse(event) {
+    
+            //Verifica se o click foi fora do elemento
+            if(!element.contains(event.target)) {
+    
+                //Remove os event listeners e o atributo
+                events.forEach((e) => {
+                    html.removeEventListener(e, removeClasse);
+                })
+                element.removeAttribute(outside);
+    
+                //Ativa a callback passada pelo parâmetro (callback)
+                callback();
+                console.log('ativou a função');
+
+            }
+        }
+    }
+
+    //eventos.forEach((i) => {
+        //botaoAbrir.addEventListener(i, abrirMenu);
+        //botaoFechar.addEventListener(i, fecharMenu);
+    //})
     botaoAbrir.addEventListener('touchstart', abrirMenu);
     botaoFechar.addEventListener('touchstart', fecharMenu);
     linkMenu.forEach((i) => { i.addEventListener('touchstart', fecharMenu) }
 )
 }
 initMenuMobile();
-
-function initClickOutside() {
-    
-}
 
 function initFiltrar() {
     const botaoAbrir = document.querySelector('[data-navMobile="abrir"]');
