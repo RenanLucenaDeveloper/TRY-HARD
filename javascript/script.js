@@ -103,6 +103,11 @@ function initModalProduto() {
     const botaoDosProdutos = document.querySelectorAll('[data-modalProduto="botao"]');
     const botaoFecharModal = document.querySelector('[data-modalProduto="fechar"]');
     const modalProduto = document.querySelector('[data-modalProduto="modal"]');
+
+    const botaoAdicionarItem = document.querySelector('[data-modalProduto="adicionarItem"]');
+    const botaoRemoverItem = document.querySelector('[data-modalProduto="removerItem"]');
+    const spanItem = document.querySelector('[data-modalProduto="spanItem"]');
+
     const eventos = ['click', 'touchstart'];
 
     function abreModal() {
@@ -113,11 +118,29 @@ function initModalProduto() {
         modalProduto.classList.remove('ativo');
     }
 
+    function adicionarItem() {
+        let quantidadeDeItens = +spanItem.innerText;
+        spanItem.innerText = quantidadeDeItens + 1;
+    }
+
+    function removerItem() {
+        let quantidadeDeItens = +spanItem.innerText;
+        if(quantidadeDeItens === 0) {
+
+        } else {
+            spanItem.innerText = quantidadeDeItens - 1;
+        }
+    }
+
     eventos.forEach((evento) => {
         botaoFecharModal.addEventListener(evento, fechaModal);
     }) 
 
-    imagensDosProdutos.forEach((i) => {i.addEventListener('click', abreModal);})
-    botaoDosProdutos.forEach((i) => {i.addEventListener('click', abreModal);})
+    imagensDosProdutos.forEach((i) => {i.addEventListener('click', abreModal);});
+    botaoDosProdutos.forEach((i) => {i.addEventListener('click', abreModal);});
+
+    botaoAdicionarItem.addEventListener('click', adicionarItem);
+    botaoRemoverItem.addEventListener('click', removerItem);
+
 }
 initModalProduto();
