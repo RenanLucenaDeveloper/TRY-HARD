@@ -74,13 +74,9 @@ function initMenuMobile() {
         }
     }
 
-    //eventos.forEach((i) => {
-        //botaoAbrir.addEventListener(i, abrirMenu);
-        //botaoFechar.addEventListener(i, fecharMenu);
-    //})
-    botaoAbrir.addEventListener('touchstart', abrirMenu);
-    botaoFechar.addEventListener('touchstart', fecharMenu);
-    linkMenu.forEach((i) => { i.addEventListener('touchstart', fecharMenu) }
+    botaoAbrir.addEventListener('click', abrirMenu);
+    botaoFechar.addEventListener('click', fecharMenu);
+    linkMenu.forEach((i) => { i.addEventListener('click', fecharMenu) }
 )
 }
 initMenuMobile();
