@@ -135,7 +135,7 @@ function initModalProduto() {
 
     function removerItem() {
         let quantidadeDeItens = +spanItem.innerText;
-        if (quantidadeDeItens === 0) {
+        if (quantidadeDeItens === 1) {
 
         } else {
             spanItem.innerText = quantidadeDeItens - 1;
@@ -154,3 +154,5 @@ function initModalProduto() {
 
 }
 initModalProduto();
+
+new SimpleAnime();

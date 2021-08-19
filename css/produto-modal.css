@@ -121,6 +121,10 @@
     margin-top: .25rem;
 }
 
+#tamanho:hover {
+    cursor: pointer;
+}
+
 .preco {
     display: block;
     font-size: 1.75rem;
@@ -168,4 +172,12 @@
     width: 17px;
     background: url(../img/coracao.svg) no-repeat center;
     background-size: cover;
+}
+
+.botao-altera-quantidade {
+    padding: .25rem;
+}
+
+.botao-altera-quantidade:hover {
+    cursor: pointer;
 }
