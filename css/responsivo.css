@@ -66,6 +66,17 @@
         border-radius: 3px;
     }
 
+    
+/* Sobre */
+
+    #sobre {
+        max-width: 768px !important;
+    }
+
+    #sobre .img-container {
+        width: 350px !important;
+    }
+
 }
 
 /* ----------------------------- */
@@ -188,6 +199,16 @@
         height: 3px;
         background-color: #FFFAF5;
         margin: 20px auto;
+    }
+    
+    /* Sobre */
+
+    #sobre {
+        max-width: 600px !important;
+    }
+
+    #sobre .img-container {
+        width: 275px !important;
     }
 
 }
@@ -597,6 +618,69 @@
         line-height: 24px;
         max-width: 280px;
         margin: 0 auto;
+    }
+    
+    /* Sobre */
+
+    #sobre {
+        padding-top: 125px;
+        color: #FCF1F1;
+        max-width: 280px !important;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
+        gap: 2rem;
+    }
+
+    #sobre::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 280px;
+        background-color: #270003;
+        margin: 2rem auto 0 auto;
+    }
+
+    #sobre h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.05em;
+        color: #FCF1F1;
+    }
+
+    #sobre h1::after {
+        width: 50px;
+    }
+
+    #sobre p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        
+        -ms-word-break: break-all;
+        /* This is the dangerous one in WebKit, as it breaks things wherever */
+        word-break: break-all;
+        /* Instead use this non-standard one: */
+        word-break: break-word;
+        
+        /* Adds a hyphen where the word breaks, if supported (No Blink) */
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+        
+        max-width: 280px !important;
+    }
+
+    #sobre .img-container {
+        height: 200px;
+        width: 280px;
+    }
+
+    #sobre button a {
+        padding: .1rem 0 .25rem 0 !important;
     }
 
 }

@@ -128,6 +128,10 @@ header {
     margin: 40px auto 30px auto;
 }
 
+#intro .link-seta {
+    padding: 0;
+}
+
 /* Produtos */
 
 #produtos {
@@ -262,14 +266,6 @@ header {
     font-size: 1.5rem;
 }
 
-/* Sobre */
-
-#sobre {
-    height: 100vh;
-    background-color: #fff;
-    display: none;
-}
-
 /* Footer */
 
 footer {
@@ -321,7 +317,7 @@ footer {
 
 [data-anime] {
     opacity: 0;
-    transform: translate3d(0,-20px,0);
+    transform: translate3d(0,-15px,0);
 }
 
 .anime {
@@ -332,4 +328,67 @@ footer {
 
 .just-opacity {
     transform: none;
+}
+
+/* Sobre */
+
+#sobre {
+    padding-top: 230px;
+    color: #FCF1F1;
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+}
+
+#sobre h1 {
+    font-size: 2.75rem;
+    letter-spacing: 0.05em;
+    color: #FCF1F1;
+}
+
+#sobre h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #380D11;
+    margin: .4rem 0 1rem 0;
+}
+
+#sobre p {
+    font-family: 'Bitter', serif;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    word-wrap: break-word;
+    max-width: 30vw;
+    line-height: 1.35rem;
+    color: #CEC1C1;
+}
+
+#sobre .img-container {
+    display: block;
+    border-radius: 3px;
+    background-color: #FCF1F1;
+    height: 350px;
+    width: 500px;
+}
+
+#sobre button {
+    font-family: 'Bitter', serif;
+    font-size: 1rem !important;
+    padding-left: 0 !important;
+    font-style: italic;
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+#sobre button a {
+    padding: 0 0 .25rem 0!important;
 }
