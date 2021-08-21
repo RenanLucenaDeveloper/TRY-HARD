@@ -339,7 +339,7 @@ footer {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 200px;
+    margin-bottom: 125px;
 }
 
 #sobre h1 {
@@ -354,7 +354,7 @@ footer {
     width: 100px;
     height: 3px;
     background: #380D11;
-    margin: .4rem 0 1rem 0;
+    margin: .35rem 0 .9rem 0;
 }
 
 #sobre p {
@@ -391,4 +391,80 @@ footer {
 
 #sobre button a {
     padding: 0 0 .25rem 0!important;
+}
+
+/* Contato */
+
+#contato {
+    color: #FCF1F1;
+    max-width: 340px;
+    margin: 230px auto 125px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 3px solid #380D11;
+    border-radius: 3px;
+    padding: 30px;
+}
+
+#contato h1 {
+    font-size: 2.75rem;
+    letter-spacing: 0.05em;
+}
+
+#contato h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #380D11;
+    margin: .35rem 0 .9rem 0;
+}
+
+#contato p.instagram {
+    font-family: 'Bitter', serif;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    word-wrap: break-word;
+    line-height: 1.35rem;
+    color: #CEC1C1;
+}
+
+#contato .bold {
+    font-weight: bold;
+}
+
+#contato .contato-info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+#contato .contato-info h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: .5rem;
+}
+
+#contato .contato-info h2::after {
+    display: none;
+}
+
+#contato .contato-info p {
+    font-family: 'Bitter', serif;
+    font-size: 1rem;
+    color: #CEC1C1;
+}
+
+#contato .contato-info .endereco {
+    margin-top: .25rem;
+}
+
+#contato .contato-info div + div::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #1f0508;
+    margin: .35rem 0 .9rem 0;
 }

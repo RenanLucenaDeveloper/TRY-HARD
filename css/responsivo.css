@@ -211,6 +211,13 @@
         width: 275px !important;
     }
 
+    /* Contato */
+
+    #contato h1 {
+        font-size: 2.5rem;
+        letter-spacing: 0.05em;
+    }
+
 }
 
 /* --------- MOBILE TOTAL ---------*/
@@ -643,7 +650,7 @@
     }
 
     #sobre h1 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         letter-spacing: 0.05em;
         color: #FCF1F1;
     }
@@ -681,6 +688,53 @@
 
     #sobre button a {
         padding: .1rem 0 .25rem 0 !important;
+    }
+
+    /* Contato */
+
+    #contato {
+        color: #FCF1F1;
+        max-width: 220px;
+        margin: 125px auto 60px auto;
+        gap: 1rem;
+        padding: 30px;
+    }
+
+    #contato h1 {
+        font-size: 1.75rem;
+    }
+
+    #contato h1::after {
+        width: 80px;
+        margin: .25rem 0 .75rem 0;
+    }
+
+    #contato p.instagram {
+        margin-bottom: 1.5rem;
+        line-height: 1.35rem;
+    }
+
+    #contato .contato-info {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    #contato .contato-info h2 {
+        font-size: 1.25rem;
+        letter-spacing: 0.04em;
+    }
+
+    #contato .contato-info p {
+        font-size: .9rem;
+    }
+
+    #contato .contato-info .endereco {
+        margin-top: .15rem;
+    }
+
+    #contato .contato-info div + div::before {
+        width: 200px;
     }
 
 }
